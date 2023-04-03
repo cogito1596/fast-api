@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from .config import settings
 
 SQLALCHEMY_URL = f'postgresql://{settings.database_username}:%s@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'%quote_plus(settings.database_password)
-#"postgresql://postgres:%s@localhost/fast api" %quote_plus("Onelove@1975") 
+
 # SQLALCHEMY_URL = '<databaseName>://<username>:<password>/@ip/<databaseName inside database>'
 
 def get_db():
